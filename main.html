@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+
+<style>
+body{margin:0;background:black;color:white;text-align:center;font-family:Arial;overflow:hidden}
+img{width:250px;border-radius:20px;box-shadow:0 0 20px pink}
+button{padding:10px 20px;background:#ff3366;border:none;border-radius:10px;color:white;margin:10px}
+.heart{position:absolute;animation:up 5s linear infinite}
+@keyframes up{from{transform:translateY(100vh)}to{transform:translateY(-10vh)}}
+</style>
+</head>
+
+<body>
+
+<h1>👑 سلمى ملكة قلبي 👑</h1>
+
+<img src="crown.jpg">
+
+<h2 id="timer"></h2>
+
+<img id="slider" src="1.jpg">
+
+<br>
+
+<video width="300" controls autoplay loop>
+<source src="video1.mp4">
+</video>
+
+<audio id="music1" autoplay loop>
+<source src="music1.mp3">
+</audio>
+
+<p id="msg"></p>
+
+<button onclick="next()">اضغطي هنا 💖</button>
+
+<script>
+
+// قلوب
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),5000);
+},300);
+
+// عداد
+let start=new Date("2025-05-25");
+setInterval(()=>{
+let now=new Date();
+let d=Math.floor((now-start)/(1000*60*60*24));
+document.getElementById("timer").innerHTML="بقالنا "+d+" يوم ❤️";
+},1000);
+
+// سلايدر
+let i=1;
+setInterval(()=>{
+i++; if(i>15)i=1;
+document.getElementById("slider").src=i+".jpg";
+},2000);
+
+// رسالة
+let text="سلمى انتي غالية عندي اووووي ❤️ انتي اجمل حاجة في حياتي...";
+let x=0;
+function write(){
+if(x<text.length){
+document.getElementById("msg").innerHTML+=text[x];
+x++;
+setTimeout(write,40);
+}}
+write();
+
+// انتقال
+function next(){
+document.getElementById("music1").pause();
+window.location="page2.html";
+}
+</script>
+
+</body>
+</html>
