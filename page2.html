@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>قوتك ❤️</title>
+
+<style>
+body{background:black;color:white;text-align:center;font-family:Arial}
+img{width:250px;border-radius:20px}
+button{padding:10px;background:#ff3366;border:none;border-radius:10px;color:white}
+</style>
+</head>
+
+<body>
+
+<h1>💪 انتي قوية 💪</h1>
+
+<img id="slider2" src="p2_1.jpg">
+
+<video width="300" controls autoplay loop>
+<source src="video2.mp4">
+</video>
+
+<audio id="music2" autoplay loop>
+<source src="music2.mp3">
+</audio>
+
+<p id="msg2"></p>
+
+<button onclick="go()">كملي ❤️</button>
+
+<script>
+
+let i=1;
+setInterval(()=>{
+i++; if(i>10)i=1;
+document.getElementById("slider2").src="p2_"+i+".jpg";
+},2000);
+
+let text="انتي قوية جدًا 💪 وهتنجحي في الثانوية وتبقي دكتورة شاطرة ❤️";
+let x=0;
+function write(){
+if(x<text.length){
+document.getElementById("msg2").innerHTML+=text[x];
+x++;
+setTimeout(write,40);
+}}
+write();
+
+function go(){
+document.getElementById("music2").pause();
+window.location="page3.html";
+}
+</script>
+
+</body>
+</html>
