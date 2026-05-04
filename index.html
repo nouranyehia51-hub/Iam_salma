@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Salma ❤️</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+color:white;
+font-family:Arial;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+text-align:center;
+box-shadow:0 0 30px pink;
+}
+
+h1{color:#ff4d88;text-shadow:0 0 20px pink;}
+
+input{padding:10px;border:none;border-radius:10px;text-align:center}
+
+button{
+padding:10px 20px;
+background:#ff3366;
+border:none;
+border-radius:10px;
+color:white;
+margin-top:10px;
+}
+
+#error{color:red;margin-top:10px}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>👑 سلمى 👑</h1>
+
+<p>يا اجمل بنت في الدنيا ❤️ افتحي واطمني 💖</p>
+
+<input id="pass" type="password" placeholder="كلمة السر">
+<br>
+<button onclick="check()">دخول</button>
+
+<div id="error"></div>
+</div>
+
+<script>
+function check(){
+if(document.getElementById("pass").value==="iam_salma"){
+window.location="main.html";
+}else{
+document.getElementById("error").innerHTML="غلط 😅";
+}
+}
+</script>
+
+</body>
+</html>
