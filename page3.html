@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+
+<style>
+body{background:black;color:white;text-align:center;font-family:Arial}
+p{width:80%;margin:auto;font-size:20px;line-height:1.8}
+</style>
+</head>
+
+<body>
+
+<h1>❤️ رسالة ليكي ❤️</h1>
+
+<p id="msg3"></p>
+
+<script>
+let text="سلمى... انتي غالية عندي جدًا ❤️ انا دايمًا جنبك ومش هسيبك... هننجح سوا ونبقى دايمًا لبعض ❤️";
+let x=0;
+
+function write(){
+if(x<text.length){
+document.getElementById("msg3").innerHTML+=text[x];
+x++;
+setTimeout(write,40);
+}}
+write();
+</script>
+
+</body>
+</html>
